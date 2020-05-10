@@ -14,7 +14,7 @@
                 console.log(response);
                 return response.json();
             }).then(function(response){
-                document.getElementById("output").textContent = "Data: " + response;
+                document.getElementById("output").textContent = "Data: " + response[0];
             });
         </script>    
     </body>
