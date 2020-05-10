@@ -26,6 +26,6 @@ client.connect(function(error) {
 
 app.get("/api/all", function(req,res) {
     client.query("select * from users;", function(error, result) {
-        res.send.json(result);
-    })
+        res.json(result);
+    });
 });
