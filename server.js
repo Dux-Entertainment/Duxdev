@@ -31,6 +31,7 @@ pool.connect(function(error) {
 
 app.get("/api/all", function(req,res) {
     pool.query("select * from users;", function(error, result) {
-        res.json(result);
+        res.json(result.rows);
     });
 });
+

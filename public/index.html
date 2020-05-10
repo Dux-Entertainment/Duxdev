@@ -12,7 +12,7 @@
         <script>
             fetch("/api/all").then(function(response){
                 console.log(response);
-                return response.text();
+                return response.json();
             }).then(function(response){
                 document.getElementById("output").textContent = "Data: " + response;
             });
