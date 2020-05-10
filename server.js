@@ -12,7 +12,7 @@ const pool = new Pool({
 });
 
   
-client.connect();
+pool.connect();
 
 const app = express();
 
@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static("public"));
 
-client.connect(function(error) {
+pool.connect(function(error) {
     console.log("connection to db");
     app.listen(PORT, function() {
         console.log("listening at port " + PORT);
@@ -30,7 +30,7 @@ client.connect(function(error) {
 });
 
 app.get("/api/all", function(req,res) {
-    client.query("select * from users;", function(error, result) {
+    pool.query("select * from users;", function(error, result) {
         res.json(result);
     });
 });
