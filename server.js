@@ -40,7 +40,7 @@ app.post("/api/user", function(req,res) {
         res.send(result)
     });*/
 
-    res.send("adasd")
+    res.send(req.body.username);
 
 });
 
