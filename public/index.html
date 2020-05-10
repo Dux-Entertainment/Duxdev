@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Dux - Dev</title>
+    </head>
+    <body>
+        Dux Entertainment
+        <div id="output"></div>
+        <script>
+            fetch("/api/all").then(function(response){
+                console.log(response);
+                return response.text();
+            }).then(function(response){
+                document.getElementById("output").textContent = "Data: " + response;
+            });
+        </script>    
+    </body>
+</html>

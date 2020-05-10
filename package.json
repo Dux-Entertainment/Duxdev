@@ -1,0 +1,29 @@
+{
+  "name": "dux",
+  "version": "1.0.0",
+  "description": "My rpg games for server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dux-Entertainment/Duxdev.git"
+  },
+  "keywords": [
+    "Game",
+    "RPG",
+    "Server",
+    "Node.js"
+  ],
+  "author": "Dux - Proinfinto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dux-Entertainment/Duxdev/issues"
+  },
+  "homepage": "https://github.com/Dux-Entertainment/Duxdev#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.1.0"
+  }
+}
