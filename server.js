@@ -22,12 +22,10 @@ client.connect(function(error) {
     app.listen(PORT, function() {
         console.log("listening at port " + PORT);
     })
-};
+});
 
 app.get("/api/all", function(req,res) {
     client.query("SELECT * FROM users;", function(error, result) {
         res.json(result);
     })
 })
-
-app.listen(PORT, () => console.log(`Example app listening at http://localhost:${PORT}`))
