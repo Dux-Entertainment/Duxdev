@@ -35,3 +35,7 @@ app.get("/api/all", function(req,res) {
     });
 });
 
+app.post("/api/user", function(req,res) {
+    res.send(req.body)
+});
+
