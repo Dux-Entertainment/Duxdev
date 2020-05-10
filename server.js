@@ -37,7 +37,7 @@ app.get("/api/all", function(req,res) {
 
 app.post("/api/user", function(req,res) {
     pool.query("select * from users where username='"+req.body.username+"' and password='"+req.body.password+"';", function(error, result) {
-        res.json(result.rows[0]);
+       res.send(result.rowCount); 
     });
 });
 
