@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 const { Client } = require('pg');
 
 const client = new Client({
-    connectionString: "postgres://sernpqbnsfvlul:18589cc69883b17ddcdd4129f1b98184581cd9d0b4f6e273728d7b6cc8aa84be@ec2-46-137-156-205.eu-west-1.compute.amazonaws.com:5432/d4g2n31slp06sk",
+    connectionString: process.env.DATABASE_URL,
     ssl: true,
 });
   
