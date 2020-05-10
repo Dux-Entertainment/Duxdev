@@ -1,11 +1,16 @@
 const express = require("express");
-var bodyParser = require('body-parser');
 const { Client } = require('pg');
+const Pool = require('pg').Pool
 
-const client = new Client({
-    connectionString: process.env.DATABASE_URL,
-    ssl: true,
+
+const pool = new Pool({
+  user: 'sernpqbnsfvlul',
+  host: 'ec2-46-137-156-205.eu-west-1.compute.amazonaws.com',
+  database: 'd4g2n31slp06sk',
+  password: '18589cc69883b17ddcdd4129f1b98184581cd9d0b4f6e273728d7b6cc8aa84be',
+  port: 5432,
 });
+
   
 client.connect();
 
